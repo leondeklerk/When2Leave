@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="nl.leontheclerk.when2leave">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/when2leavelogo_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/when2leavelogo_round"
+        android:screenOrientation="fullUser"
+        android:supportsRtl="true"
+        android:theme="@style/Dark"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/activity_settings" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/activity_about" />
+        <receiver android:enabled="true"
+            android:name=".NotificationPage$NotificationPublisher"
+            android:exported="true"/>
+        <activity android:name=".NotificationPage"
+            android:label="@string/menu_notification"/>
+    </application>
+
+</manifest>

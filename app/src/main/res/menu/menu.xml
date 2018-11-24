@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single" android:id="@+id/menu_group_top">
+        <item android:id="@+id/nav_w2l"
+            android:icon="@mipmap/ic_access_time_black_24dp"
+            android:title="@string/app_name"
+            android:checked="true"/>
+        <item android:id="@+id/nav_t2t"
+            android:icon="@mipmap/ic_directions_walk_white_24dp"
+            android:title="@string/menu_t2t"/>
+    </group>
+    <group android:id="@+id/menu_group_bottom">
+        <item android:id="@+id/nav_notifications"
+            android:icon="@mipmap/ic_notifications_white_24dp"
+            android:title="@string/menu_notification"/>
+        <item android:id="@+id/nav_settings"
+            android:icon="@mipmap/ic_settings_black_24dp"
+            android:title="@string/menu_setting"/>
+        <item android:id="@+id/nav_info"
+            android:icon="@mipmap/ic_info_black_24dp"
+            android:title="@string/menu_info"/>
+    </group>
+</menu>

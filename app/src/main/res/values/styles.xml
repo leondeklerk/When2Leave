@@ -1,0 +1,48 @@
+<resources>
+    <!-- Default: DARK-->
+    <style name="AlertDialogTheme_dark" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="colorAccent">?attr/dialogText</item>
+        <item name="android:background">?attr/dialogBackgroundColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/dialogText</item>
+        <item name="android:textColorPrimary">?attr/dialogText</item>
+        <item name="textColorAlertDialogListItem">?attr/dialogText</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColorAlertDialogListItem">?attr/dialogText</item>
+        <item name="colorControlNormal">?attr/radioNormal</item>
+        <item name="colorControlActivated">?attr/radioActivated</item>
+        <item name="android:alertDialogStyle">@style/DialogBackground_dark</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="buttonStyle"  parent="Widget.AppCompat.Button.ButtonBar.AlertDialog"><item name="android:textColor">?attr/dialogText</item></style>
+
+    <style name="PickerDialogTheme_dark" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">?attr/dialogText</item>
+        <item name="android:textColorPrimary">?attr/dialogText</item>
+        <item name="android:gravity">center</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:alertDialogStyle">@style/DialogBackground_dark</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+        <item name="buttonBarNegativeButtonStyle">@style/buttonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/buttonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/buttonStyle</item>
+    </style>
+
+    <style name="DialogBackground_dark">
+        <item name="android:topDark">?attr/dialogBackgroundColor</item>
+        <item name="android:centerDark">?attr/dialogBackgroundColor</item>
+        <item name="android:bottomDark">?attr/dialogBackgroundColor</item>
+        <item name="android:bottomMedium">?attr/dialogBackgroundColor</item>
+    </style>
+
+    <style name="TextAppearanceTP_dark" parent="@android:style/TextAppearance.Material.Headline"><item name="android:textColor">?attr/dialogText</item></style>
+
+    <style name="DrawerArrowStyle_dark" parent="@style/Widget.AppCompat.DrawerArrowToggle"><item name="color">?attr/titleBarColor</item></style>
+
+    <style name="t2t_edit_text_style">
+        <item name="colorControlNormal">?attr/colorAccent</item>
+        <item name="colorControlActivated">?attr/colorAccent</item>
+    </style>
+</resources>

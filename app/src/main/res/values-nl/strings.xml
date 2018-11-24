@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">When to Leave?</string>
+    <string name="arrive_text">Tijd van aankomst</string>
+    <string name="hint_date">Selecteer een datum</string>
+    <string name="hint_time">Selecteer een tijd</string>
+    <string name="hour_info">Uren</string>
+    <string name="hour_select">Selecteer het aantal uur</string>
+    <string name="minute_info">Minuten</string>
+    <string name="minute_select">Selecteer het aantal minuten</string>
+    <string name="traveltime_text">Reistijd</string>
+    <string name="output_invalid">Helaas! Je bent waarschijnlijk te laat! Zo niet, probeer het alstjeblieft opnieuw met een geldige datum en / of tijd!</string>
+    <string name="output_time_only">vandaag</string>
+    <string name="output_full">"Het is tijd om te vertrekken om "</string>
+    <string name="dialog_confirm">Oke</string>
+    <string name="output_inbtwn">op</string>
+    <string name="output_now">Het is nu tijd om te vetrekken</string>
+    <string name="d_arrival_hint">Datum van aankomst</string>
+    <string name="h_travel_hint">Reisuren</string>
+    <string name="m_travel_hint">Reisminuten</string>
+    <string name="t_arrival_hint">Tijd van aankomst</string>
+    <string name="menu_setting">Instellingen</string>
+    <string name="menu_close">Sluit</string>
+    <string name="menu_open">Open</string>
+    <string name="minute_fill_in">Vul het aantal minuten in</string>
+    <string name="hour_fill_in">Vul het aantal uur in</string>
+    <string name="dialog_cancel">Annuleer</string>
+    <string name="switch_text">Tijd spinner / tekst</string>
+    <string name="prefs_theme_key">Thema</string>
+    <string name="t2t_distance">Afstand</string>
+    <string name="t2t_travel_type">Type beweging</string>
+    <string name="activity_settings">Instellingen</string>
+    <string name="t2t_cycle">Fietsen</string>
+    <string name="t2t_run">Rennen</string>
+    <string name="t2t_walk">Lopen</string>
+    <string name="setting_run">Gemiddelde rensnelheid</string>
+    <string name="setting_walk">Gemiddelde loopsnelheid</string>
+    <string name="setting_cycle">Gemiddelde fietssnelheid</string>
+    <string name="menu_info">Over</string>
+    <string name="settings_switch_summary">Geeft de mogelijkheid om de reistijd in te typen, in plaats van een spinner</string>
+    <string name="t2t_unit_p">Meter</string>
+    <string name="t2t_unit_s">Meter</string>
+    <string name="unit">km/u</string>
+    <string name="t2t_gag">duurt ongeveer</string>
+    <string name="activity_about">Over</string>
+    <string name="and">en</string>
+    <string name="t2t_output_error">Gebruik een afstand van minstens 1 meter</string>
+    <string name="unit_day_p">dagen</string>
+    <string name="unit_day_s">dag</string>
+    <string name="unit_hour_p">uren</string>
+    <string name="unit_hour_s">uur</string>
+    <string name="unit_metre_p">Meter</string>
+    <string name="unit_metre_p_l">meters</string>
+    <string name="unit_metre_s">Meter</string>
+    <string name="unit_metre_s_l">meter</string>
+    <string name="unit_minute_p">minuten</string>
+    <string name="unit_minute_s">minuut</string>
+    <string name="unit_second_p">seconden</string>
+    <string name="unit_second_s">seconde</string>
+    <string name="disclaimer_summary">Deze app hoeft niet altijd 100% correct te zijn, houd hier dus rekening mee. Ik ben niet verantwoordelijk voor problemen die ontstaan door het gebruik van deze app</string>
+    <string name="about_summary">Omdat dit mijn eerste app is, is het doel van deze app dan ook vooral om zelf Java en het Android ecosysteem te leren kennen. Verwacht dus ook geen echt nuttige updates en geniet ervan</string>
+    <string name="motion_cycle">Het fietsen van</string>
+    <string name="motion_run">Het rennen van</string>
+    <string name="motion_walk">Het lopen van</string>
+
+    <string-array name="themes">
+        <item>Donker</item>
+        <item>Blauwgroen</item>
+        <item>Blauwgrijs</item>
+        <item>Bruin</item>
+        <item>Cyaan</item>
+        <item>Donkerblauw</item>
+        <item>Groen</item>
+        <item>Lichtblauw</item>
+        <item>Oranje</item>
+        <item>Roze (Pepita Pink)</item>
+        <item>Paars</item>
+        <item>Rood</item>
+        <item>Licht</item>
+        <item>Geel</item>
+    </string-array>
+    <string name="set_notification">Stel een notificatie in</string>
+    <string name="menu_notification">Notificaties</string>
+    <string name="notification_no_scheduled">Er zijn geen geplande notificaties</string>
+    <string name="noti_start_scheduled_s">Er is</string>
+    <string name="noti_start_scheduled_p">Er zijn</string>
+    <string name="noti_end_scheduled_s">geplande notificatie</string>
+    <string name="noti_end_scheduled_p">" geplande notificaties"</string>
+    <string name="confirm_delete">Weet je zeker dat je deze notificatie wilt verwijderen?</string>
+    <string name="confirm_delete_button">Ja</string>
+    <string name="not_t2l">Het is tijd om te vertrekken!</string>
+    <string name="not_channel_title">Standaard notificatiekanaal</string>
+    <string name="not_channel_description">Standaard notificatiekanaal van When to Leave?.</string>
+    <string name="cancel_all_not">Annuleer alle notificaties</string>
+
+</resources>

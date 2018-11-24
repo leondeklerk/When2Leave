@@ -1,0 +1,178 @@
+<android.support.v4.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/colorBackground"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="25dp">
+
+        <EditText
+            android:id="@+id/et_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:hint="@string/d_arrival_hint"
+            app:backgroundTint="?attr/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/et_time"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/date"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/et_hour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:hint="@string/h_travel_hint"
+            app:backgroundTint="?attr/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/et_minute"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/hour"
+            app:layout_constraintTop_toBottomOf="@+id/et_time"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/et_minute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/et_date"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="0dp"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:hint="@string/m_travel_hint"
+            app:backgroundTint="?attr/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/calc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/minute"
+            app:layout_constraintTop_toBottomOf="@+id/et_hour" />
+
+        <Button
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/et_date"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/et_date"
+            android:layout_toRightOf="@+id/et_date"
+            android:background="?attr/buttonBackground"
+            android:text="@string/hint_date"
+            app:layout_constraintBottom_toTopOf="@+id/time"
+            app:layout_constraintLeft_toRightOf="@+id/et_date"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/hour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/et_date"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toEndOf="@+id/et_date"
+            android:layout_toRightOf="@+id/et_date"
+            android:background="?attr/buttonBackground"
+            android:text="@string/hour_info"
+            app:layout_constraintBottom_toTopOf="@+id/minute"
+            app:layout_constraintLeft_toRightOf="@+id/et_hour"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/minute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/date"
+            android:layout_alignStart="@+id/date"
+            android:layout_below="@+id/date"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="?attr/buttonBackground"
+            android:text="@string/minute_info"
+            app:layout_constraintBottom_toTopOf="@+id/calc"
+            app:layout_constraintLeft_toRightOf="@+id/et_minute"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hour"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/date"
+            android:layout_alignStart="@+id/date"
+            android:layout_below="@+id/date"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="?attr/buttonBackground"
+            android:text="@string/hint_time"
+            app:layout_constraintBottom_toTopOf="@+id/hour"
+            app:layout_constraintLeft_toRightOf="@+id/et_time"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date"
+            android:layout_marginBottom="16dp" />
+
+
+        <EditText
+            android:id="@+id/et_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/et_date"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:hint="@string/t_arrival_hint"
+            app:backgroundTint="?attr/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/et_hour"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/time"
+            app:layout_constraintTop_toBottomOf="@+id/et_date"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/calc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:background="?attr/buttonBackground"
+            android:text="@string/calc_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

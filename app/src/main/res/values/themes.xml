@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Dark" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary_dark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_dark</item>
+        <item name="colorAccent">@color/colorAccent_dark</item>
+        <item name="android:timePickerDialogTheme">@style/PickerDialogTheme_dark</item>
+        <item name="android:datePickerDialogTheme">@style/PickerDialogTheme_dark</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme_dark</item>
+        <item name="android:colorBackground">@color/colorBackground_dark</item>
+        <item name="android:textColorPrimary">@color/text_white</item>
+        <item name="android:textColorSecondary">@color/text_secondary_white</item>
+        <item name="android:textColorHint">#808080</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="buttonBackground">@color/buttons_dark</item>
+        <item name="rippleColor">@color/ripple_dark</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle_dark</item>
+        <item name="colorControlNormal">@color/text_white</item>
+        <item name="android:listDivider">?attr/colorAccent</item>
+        <item name="android:windowBackground">@drawable/background_splash</item>
+        <item name="dialogAccentColor">@color/colorAccent_dark</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_dark</item>
+        <item name="radioNormal">@color/radio_dark_norm</item>
+        <item name="radioActivated">@color/colorAccent_dark</item>
+        <item name="dialogText">@color/text_white</item>
+        <item name="titleBarColor">@color/text_white</item>
+        <item name="selectedItemMenu">#D9FFFFFF</item>
+    </style>
+
+    <style name="BlueGreen" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_bgreen</item>
+        <item name="colorPrimary">@color/colorPrimary_bgreen</item>
+        <item name="android:colorBackground">@color/colorBackground_bgreen</item>
+        <item name="colorAccent">@color/colorAccent_bgreen</item>
+        <item name="buttonBackground">@color/buttons_bgreen</item>
+        <item name="rippleColor">@color/ripple_bgreen</item>
+        <item name="dialogAccentColor">@color/colorAccent_bgreen</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_bgreen</item>
+        <item name="radioNormal">@color/radio_bgreen_act</item>
+        <item name="radioActivated">@color/radio_bgreen_norm</item>
+    </style>
+
+    <style name="BlueGrey" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_bgrey</item>
+        <item name="colorPrimary">@color/colorPrimary_bgrey</item>
+        <item name="android:colorBackground">@color/colorBackground_bgrey</item>
+        <item name="colorAccent">@color/colorAccent_bgrey</item>
+        <item name="buttonBackground">@color/buttons_bgrey</item>
+        <item name="rippleColor">@color/ripple_bgrey</item>
+        <item name="dialogAccentColor">@color/colorAccent_bgrey</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_bgrey</item>
+        <item name="radioNormal">@color/radio_bgrey_norm</item>
+        <item name="radioActivated">@color/radio_bgrey_act</item>
+    </style>
+
+    <style name="Brown" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_brown</item>
+        <item name="colorPrimary">@color/colorPrimary_brown</item>
+        <item name="android:colorBackground">@color/colorBackground_brown</item>
+        <item name="colorAccent">@color/colorAccent_brown</item>
+        <item name="buttonBackground">@color/buttons_brown</item>
+        <item name="rippleColor">@color/ripple_brown</item>
+        <item name="dialogAccentColor">@color/colorAccent_brown</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_brown</item>
+        <item name="radioNormal">@color/radio_brown_norm</item>
+        <item name="radioActivated">@color/radio_brown_act</item>
+    </style>
+
+    <style name="Cyan" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_cyan</item>
+        <item name="colorPrimary">@color/colorPrimary_cyan</item>
+        <item name="android:colorBackground">@color/colorBackground_cyan</item>
+        <item name="colorAccent">@color/colorAccent_cyan</item>
+        <item name="buttonBackground">@color/buttons_cyan</item>
+        <item name="rippleColor">@color/ripple_cyan</item>
+        <item name="dialogAccentColor">@color/colorAccent_cyan</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_cyan</item>
+        <item name="radioNormal">@color/radio_cyan_norm</item>
+        <item name="radioActivated">@color/radio_cyan_act</item>
+    </style>
+
+    <style name="DarkBlue" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_dblue</item>
+        <item name="colorPrimary">@color/colorPrimary_dblue</item>
+        <item name="android:colorBackground">@color/colorBackground_dblue</item>
+        <item name="colorAccent">@color/colorAccent_dblue</item>
+        <item name="buttonBackground">@color/buttons_dblue</item>
+        <item name="rippleColor">@color/ripple_dblue</item>
+        <item name="dialogAccentColor">@color/colorAccent_dblue</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_dblue</item>
+        <item name="radioNormal">@color/radio_dblue_norm</item>
+        <item name="radioActivated">@color/radio_dblue_act</item>
+    </style>
+
+    <style name="Green" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_green</item>
+        <item name="colorPrimary">@color/colorPrimary_green</item>
+        <item name="android:colorBackground">@color/colorBackground_green</item>
+        <item name="colorAccent">@color/colorAccent_green</item>
+        <item name="buttonBackground">@color/buttons_green</item>
+        <item name="rippleColor">@color/ripple_green</item>
+        <item name="dialogAccentColor">@color/colorAccent_green</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_green</item>
+        <item name="radioNormal">@color/radio_green_norm</item>
+        <item name="radioActivated">@color/radio_green_act</item>
+    </style>
+
+    <style name="LightBlue" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_lblue</item>
+        <item name="colorPrimary">@color/colorPrimary_lblue</item>
+        <item name="android:colorBackground">@color/colorBackground_lblue</item>
+        <item name="colorAccent">@color/colorAccent_lblue</item>
+        <item name="buttonBackground">@color/buttons_lblue</item>
+        <item name="rippleColor">@color/ripple_lblue</item>
+        <item name="dialogAccentColor">@color/colorAccent_lblue</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_lblue</item>
+        <item name="radioNormal">@color/radio_lblue_norm</item>
+        <item name="radioActivated">@color/radio_lblue_act</item>
+    </style>
+
+    <style name="Orange" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_orange</item>
+        <item name="colorPrimary">@color/colorPrimary_orange</item>
+        <item name="android:colorBackground">@color/colorBackground_orange</item>
+        <item name="colorAccent">@color/colorAccent_orange</item>
+        <item name="buttonBackground">@color/buttons_orange</item>
+        <item name="rippleColor">@color/ripple_orange</item>
+        <item name="dialogAccentColor">@color/colorAccent_orange</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_orange</item>
+        <item name="radioNormal">@color/radio_orange_norm</item>
+        <item name="radioActivated">@color/radio_orange_act</item>
+    </style>
+
+    <style name="Pink" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_pink</item>
+        <item name="colorPrimary">@color/colorPrimary_pink</item>
+        <item name="android:colorBackground">@color/colorBackground_pink</item>
+        <item name="colorAccent">@color/colorAccent_pink</item>
+        <item name="buttonBackground">@color/buttons_pink</item>
+        <item name="rippleColor">@color/ripple_pink</item>
+        <item name="dialogAccentColor">@color/colorAccent_pink</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_pink</item>
+        <item name="radioNormal">@color/radio_pink_norm</item>
+        <item name="radioActivated">@color/radio_pink_act</item>
+    </style>
+
+    <style name="Purple" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_purple</item>
+        <item name="colorPrimary">@color/colorPrimary_purple</item>
+        <item name="android:colorBackground">@color/colorBackground_purple</item>
+        <item name="colorAccent">@color/colorAccent_purple</item>
+        <item name="buttonBackground">@color/buttons_purple</item>
+        <item name="rippleColor">@color/ripple_purple</item>
+        <item name="dialogAccentColor">@color/colorAccent_purple</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_purple</item>
+        <item name="radioNormal">@color/radio_purple_norm</item>
+        <item name="radioActivated">@color/radio_purple_act</item>
+    </style>
+
+    <style name="Red" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_red</item>
+        <item name="colorPrimary">@color/colorPrimary_red</item>
+        <item name="android:colorBackground">@color/colorBackground_red</item>
+        <item name="colorAccent">@color/colorAccent_red</item>
+        <item name="buttonBackground">@color/buttons_red</item>
+        <item name="rippleColor">@color/ripple_red</item>
+        <item name="dialogAccentColor">@color/colorAccent_red</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_red</item>
+        <item name="radioNormal">@color/radio_red_norm</item>
+        <item name="radioActivated">@color/radio_red_act</item>
+    </style>
+
+    <style name="Light" parent="Dark" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_light</item>
+        <item name="colorPrimary">@color/colorPrimary_light</item>
+        <item name="android:colorBackground">@color/colorBackground_light</item>
+        <item name="colorAccent">@color/colorAccent_light</item>
+        <item name="buttonBackground">@color/buttons_light</item>
+        <item name="android:textColorPrimary">@color/text_black</item>
+        <item name="android:textColorSecondary">@color/text_secondary_black</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textColorHint">#616161</item>
+        <item name="rippleColor">@color/ripple_light</item>
+        <item name="colorControlNormal">@color/text_white</item>
+        <item name="dialogAccentColor">@color/colorAccent_light</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_light</item>
+        <item name="dialogText">@color/text_black</item>
+        <item name="radioNormal">@color/radio_light_norm</item>
+        <item name="radioActivated">@color/radio_light_act</item>
+        <item name="android:textColorPrimaryInverse">@color/text_black</item>
+        <item name="android:textColorSecondaryInverse">@color/text_black</item>
+        <item name="titleBarColor">@color/text_white</item>
+        <item name="selectedItemMenu">#BF000000</item>
+    </style>
+
+    <style name="Yellow" parent="Light" >
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_yellow</item>
+        <item name="colorPrimary">@color/colorPrimary_yellow</item>
+        <item name="android:colorBackground">@color/colorBackground_yellow</item>
+        <item name="colorAccent">@color/colorAccent_yellow</item>
+        <item name="buttonBackground">@color/buttons_yellow</item>
+        <item name="rippleColor">@color/ripple_yellow</item>
+        <item name="dialogAccentColor">@color/colorAccent_yellow</item>
+        <item name="dialogBackgroundColor">@color/colorBackground_yellow</item>
+        <item name="radioNormal">@color/radio_yellow_norm</item>
+        <item name="radioActivated">@color/radio_yellow_act</item>
+        <item name="titleBarColor">@color/text_black</item>
+        <item name="colorControlNormal">@color/text_black</item>
+    </style>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PickerDialogTheme_dark" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">?attr/dialogText</item>
+        <item name="android:textColorSecondary">?attr/dialogText</item>
+        <item name="android:timePickerStyle">@style/TimePickerDialogStyle_dark</item>
+        <item name="android:backgroundTint">?attr/dialogBackgroundColor</item>
+        <item name="android:colorControlActivated">?attr/dialogAccentColor</item>
+        <item name="android:headerBackground">?attr/dialogBackgroundColor</item>
+        <item name="android:colorBackground">?attr/dialogBackgroundColor</item>
+        <item name="colorPrimary">?attr/dialogBackgroundColor</item>
+        <item name="android:textColorPrimaryInverse">?attr/dialogText</item>
+        <item name="android:textColorPrimary">?attr/dialogText</item>
+        <item name="android:background">?attr/dialogBackgroundColor</item>
+        <item name="android:datePickerStyle">@style/datepicker_extra_style</item>
+    </style>
+
+
+    <style name="AlertDialogTheme_dark" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:textColorPrimary">?attr/dialogText</item>
+        <item name="android:background">?attr/dialogBackgroundColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/dialogText</item>
+        <item name="textColorAlertDialogListItem">?attr/dialogText</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColorAlertDialogListItem">?attr/dialogText</item>
+        <item name="colorControlNormal">?attr/radioNormal</item>
+        <item name="colorControlActivated">?attr/radioActivated</item>
+        <item name="buttonBarNegativeButtonStyle">@style/buttonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/buttonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/buttonStyle</item>
+        <item name="colorAccent">?attr/dialogText</item>
+    </style>
+
+    <style name="TimePickerDialogStyle_dark" parent="@android:style/Widget.Material.TimePicker">
+        <item name="colorAccent">?attr/dialogAccentColor</item>
+        <item name="android:timePickerMode">clock</item>
+        <item name="android:headerBackground">?attr/dialogBackgroundColor</item>
+        <item name="android:headerTimeTextAppearance">@style/TextAppearanceTP_dark</item>
+        <item name="android:numbersTextColor">?attr/dialogText</item>
+        <item name="android:numbersSelectorColor">?attr/dialogAccentColor</item>
+        <item name="android:numbersBackgroundColor">?attr/dialogBackgroundColor</item>
+        <item name="android:numbersInnerTextColor">?attr/dialogText</item>
+        <item name="android:textColorPrimary">?attr/dialogText</item>
+        <item name="android:background">?attr/dialogBackgroundColor</item>
+    </style>
+
+    <style name="datepicker_extra_style" parent="@android:style/Widget.Material.DatePicker">
+        <item name="android:headerMonthTextAppearance">@style/text_style_month</item>
+        <item name="android:headerDayOfMonthTextAppearance">@style/text_style_day</item>
+    </style>
+    <style name="text_style_month">
+        <item name="android:textSize">84sp</item>
+    </style>
+    <style name="text_style_day">
+        <item name="android:textSize">76sp</item>
+    </style>
+</resources>

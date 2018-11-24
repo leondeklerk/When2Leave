@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="travel_switch"
+        android:summary="@string/settings_switch_summary"
+        android:title="@string/switch_text" />
+    <EditTextPreference
+        android:defaultValue="5"
+        android:inputType="number"
+        android:key="speed_walk"
+        android:maxLength="2"
+        android:title="@string/setting_walk" />
+    <EditTextPreference
+        android:defaultValue="10"
+        android:inputType="number"
+        android:key="speed_run"
+        android:maxLength="2"
+        android:title="@string/setting_run" />
+    <EditTextPreference
+        android:defaultValue="18"
+        android:inputType="number"
+        android:key="speed_cycle"
+        android:maxLength="2"
+        android:title="@string/setting_cycle" />
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/themes"
+        android:entryValues="@array/themes_values"
+        android:key="theme_list"
+        android:title="@string/prefs_theme_key" />
+</PreferenceScreen>

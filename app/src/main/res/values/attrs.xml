@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="appAttrs">
+        <attr name="buttonBackground" format="color"/>
+        <attr name="rippleColor" format="color"/>
+        <attr name="dialogBackgroundColor" format="color"/>
+        <attr name="dialogAccentColor" format="color"/>
+        <attr name="radioNormal" format="color"/>
+        <attr name="radioActivated" format="color"/>
+        <attr name="dialogText" format="color"/>
+        <attr name="titleBarColor" format="color"/>
+        <attr name="selectedItemMenu" format="color"/>;
+    </declare-styleable>
+</resources>
