@@ -157,3 +157,9 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/windows,androidstudio
 .idea/**
+
+# Assets
+
+**/w2l_splash.png
+**/when2leavelogo.png
+**/when2leavelogo_round.png
