@@ -59,14 +59,14 @@ public class NotificationPage extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        preferences.edit().putBoolean("destroyed", false).commit();
+        preferences.edit().putBoolean("destroyed", false).apply();
         setTheme(preferences.getInt("theme_holder", R.style.Dark));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.notification_page);
 
         alertTheme = R.style.AlertDialogTheme_dark;
-        int curtheme = preferences.getInt("theme_holder", R.style.Dark);
-        if(curtheme == R.style.Yellow || curtheme == R.style.Light){
+        int curTheme = preferences.getInt("theme_holder", R.style.Dark);
+        if(curTheme == R.style.Yellow || curTheme == R.style.Light){
             textLayout = R.layout.list_item_dark_text;
         } else {
             textLayout = R.layout.list_item;
@@ -83,12 +83,7 @@ public class NotificationPage extends AppCompatActivity implements View.OnClickL
 
         cancelButton.setOnClickListener(this);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
         context = getApplicationContext();
         setList(this);
     }
@@ -114,7 +109,7 @@ public class NotificationPage extends AppCompatActivity implements View.OnClickL
             dateSet.clear();
             preferences.edit().putStringSet("notification_array", set).apply();
 
-            Boolean workaround = preferences.getBoolean("workaround_switch", false);
+            boolean workaround = preferences.getBoolean("workaround_switch", false);
             workaround = !workaround;
             preferences.edit().putBoolean("workaround_switch", workaround).apply();
 
@@ -142,9 +137,9 @@ public class NotificationPage extends AppCompatActivity implements View.OnClickL
                 header.setText(R.string.notification_no_scheduled);
             } else {
                 if(num > 1){
-                    header.setText(String.format("%s%s%s%s%s", context.getString(R.string.noti_start_scheduled_p), " ", Integer.toString(num), " ", context.getString(R.string.noti_end_scheduled_p)));
+                    header.setText(String.format("%s%s%s%s%s", context.getString(R.string.noti_start_scheduled_p), " ", num, " ", context.getString(R.string.noti_end_scheduled_p)));
                 } else {
-                    header.setText(String.format("%s%s%s%s%s", context.getString(R.string.noti_start_scheduled_s), " ", Integer.toString(num), " ", context.getString(R.string.noti_end_scheduled_s)));
+                    header.setText(String.format("%s%s%s%s%s", context.getString(R.string.noti_start_scheduled_s), " ", num, " ", context.getString(R.string.noti_end_scheduled_s)));
                 }
             }
 
@@ -165,42 +160,38 @@ public class NotificationPage extends AppCompatActivity implements View.OnClickL
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, final int i, long l) {
         alertBuilder = new AlertDialog.Builder(this, alertTheme);
-        alertBuilder.setMessage(R.string.confirm_delete).setPositiveButton(R.string.confirm_delete_button, new DialogInterface.OnClickListener()  {
-            public void onClick(DialogInterface dialog, int id) {
-                String givenDateString = notificationList.getItemAtPosition(i).toString();
-                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.ENGLISH);
-                try {
-                    Date mDate = sdf.parse(givenDateString);
-                    millis = mDate.getTime();
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                set = preferences.getStringSet("notification_array", setTest);
-                removeSet = new TreeSet<>();
-                for (String holder : set) {
-                    String shortHolder = holder.substring(holder.length() - 13);
-                    if(shortHolder.equals(Long.toString(millis))) {
-                        Intent myIntent = new Intent(context, NotificationPublisher.class);
-                        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, Integer.parseInt(removeLastChar(holder)), myIntent, 0);
-                        AlarmManager alarmManager1 = (AlarmManager) getSystemService(ALARM_SERVICE);
-                        alarmManager1.cancel(pendingIntent);
-                        removeSet.add(holder);
-                    }
-                }
-                set.removeAll(removeSet);
-                preferences.edit().putStringSet("notification_array", set).apply();
-
-                Boolean workaround = preferences.getBoolean("workaround_switch", false);
-                workaround = !workaround;
-                preferences.edit().putBoolean("workaround_switch", workaround).apply();
-                setList(NotificationPage.this);
+        alertBuilder.setMessage(R.string.confirm_delete).setPositiveButton(R.string.confirm_delete_button, (dialog, id) -> {
+            String givenDateString = notificationList.getItemAtPosition(i).toString();
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.ENGLISH);
+            try {
+                Date mDate = sdf.parse(givenDateString);
+                assert mDate != null;
+                millis = mDate.getTime();
+            } catch (ParseException e) {
+                e.printStackTrace();
             }
+            set = preferences.getStringSet("notification_array", setTest);
+            removeSet = new TreeSet<>();
+            for (String holder : set) {
+                String shortHolder = holder.substring(holder.length() - 13);
+                if(shortHolder.equals(Long.toString(millis))) {
+                    Intent myIntent = new Intent(context, NotificationPublisher.class);
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(context, Integer.parseInt(removeLastChar(holder)), myIntent, 0);
+                    AlarmManager alarmManager1 = (AlarmManager) getSystemService(ALARM_SERVICE);
+                    alarmManager1.cancel(pendingIntent);
+                    removeSet.add(holder);
+                }
+            }
+            set.removeAll(removeSet);
+            preferences.edit().putStringSet("notification_array", set).apply();
+
+            boolean workaround = preferences.getBoolean("workaround_switch", false);
+            workaround = !workaround;
+            preferences.edit().putBoolean("workaround_switch", workaround).apply();
+            setList(NotificationPage.this);
         });
 
-        alertBuilder.setNegativeButton(R.string.dialog_cancel, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-            }
+        alertBuilder.setNegativeButton(R.string.dialog_cancel, (dialogInterface, i1) -> {
         });
         alertBuilder.show();
     }
@@ -272,7 +263,7 @@ public class NotificationPage extends AppCompatActivity implements View.OnClickL
             set.removeAll(removeSet);
             preferences.edit().putStringSet("notification_array", set).apply();
 
-            Boolean workaround = preferences.getBoolean("workaround_switch", false);
+            boolean workaround = preferences.getBoolean("workaround_switch", false);
             workaround = !workaround;
             preferences.edit().putBoolean("workaround_switch", workaround).apply();
             setList(context);

@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class T2tFragment extends Fragment implements View.OnTouchListener, View.OnClickListener {
@@ -85,7 +86,7 @@ public class T2tFragment extends Fragment implements View.OnTouchListener, View.
         btnWalk.setOnClickListener(this);
         btnRun.setOnClickListener(this);
         btnCycle.setOnClickListener(this);
-        alertBuilder = new AlertDialog.Builder(getContext(), alertTheme);
+        alertBuilder = new AlertDialog.Builder(requireContext(), alertTheme);
 
         space = " ";
         and = getString(R.string.and);
@@ -125,19 +126,15 @@ public class T2tFragment extends Fragment implements View.OnTouchListener, View.
             walkSpeed = Integer.parseInt(preferences.getString("speed_walk", "5"));
             runSpeed = Integer.parseInt(preferences.getString("speed_run", "10"));
             cycleSpeed = Integer.parseInt(preferences.getString("speed_cycle", "18"));
-            switch (vId) {
-                case R.id.walk:
-                    result = distance / (walkSpeed * factor);
-                    motion = getString(R.string.motion_walk);
-                    break;
-                case R.id.run:
-                    result = distance / (runSpeed * factor);
-                    motion = getString(R.string.motion_run);
-                    break;
-                default:
-                    result = distance / (cycleSpeed * factor);
-                    motion = getString(R.string.motion_cycle);
-                    break;
+            if (vId == R.id.walk) {
+                result = distance / (walkSpeed * factor);
+                motion = getString(R.string.motion_walk);
+            } else if (vId == R.id.run) {
+                result = distance / (runSpeed * factor);
+                motion = getString(R.string.motion_run);
+            } else {
+                result = distance / (cycleSpeed * factor);
+                motion = getString(R.string.motion_cycle);
             }
             calculateTime(Math.round(result));
 
@@ -190,9 +187,7 @@ public class T2tFragment extends Fragment implements View.OnTouchListener, View.
         } else{
             output = getString(R.string.t2t_output_error);
         }
-        alertBuilder.setMessage(output).setPositiveButton(R.string.dialog_confirm, new DialogInterface.OnClickListener() {
-            public void onClick (DialogInterface dialog,int id){
-            }
+        alertBuilder.setMessage(output).setPositiveButton(R.string.dialog_confirm, (dialog, id) -> {
         });
         alertBuilder.show();
     }
